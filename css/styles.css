@@ -31,6 +31,9 @@ img {
 
 button {
   cursor: pointer;
+  transition-property: background-color, color, box-shadow, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -47,6 +50,9 @@ body {
 
 .link {
   text-decoration: none;
+  transition-property: color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
@@ -83,13 +89,17 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #000000;
+
+  transition-property: color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-logo:hover,
 .header-logo:focus,
 .footer-logo:hover,
 .footer-logo:focus {
-  color: #000000;
+  color: fill;
 }
 
 .header-logo-span,
@@ -154,7 +164,7 @@ body {
 
   display: inline-flex;
   align-items: center;
-  flex-direction: row-reverse
+  flex-direction: row-reverse;
 }
 
 /*-------------------------MAIN------------------------------*/
@@ -308,8 +318,6 @@ body {
   width: 370px;
   left: 0;
   bottom: 0;
-  order: 1;
-  
 
 }
 /*------------------------TEAM------------------------*/
@@ -381,6 +389,10 @@ body {
   background-size: cover;
   background-color: transparent;
   color: #AFB1B8;
+
+  transition-property: background-color, color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-insta, .icon-twitter, .icon-facebook, .icon-linkedin {
@@ -497,6 +509,9 @@ margin-bottom: 50px;
 
 .portfolio-addlist {
   background: #FFFFFF;
+  position: relative;
+  width: 370px;
+  transition-property: box-shadow, transform;
 }
 
 .portfolio-addlist:hover {
@@ -532,7 +547,41 @@ margin-bottom: 50px;
   padding-right: 24px;
   padding-bottom: 20px;
   padding-left: 24px;
+
 }
+
+
+.portfolio-addtext {
+  position: absolute;
+  top: 0;
+  height: 100%;
+
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+
+  color: var(--additional-color);
+  background: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+
+
+  overflow: auto;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.portfolio-addlist:hover .portfolio-addtext {
+  transform: translateY(0%);
+}
+
 
 /*------------------------FOOTER------------------------*/
 
@@ -618,6 +667,10 @@ margin-bottom: 50px;
   background-size: cover;
   background-color: #44454E;
   color: var(--additional-color);
+
+  transition-property: background-color, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-link:hover, .join-link:focus {
